@@ -1,0 +1,94 @@
+.header{
+  background: skyblue;
+  height: 80px;    /* ヘッダーの高さ */
+  /* padding-left: 20px; 左に20px余白 */
+
+  display: flex; /* 中身を柔軟に配置できるモード */
+  align-items: flex-end; /* 下寄せにする */
+  justify-content: space-between;
+  padding: 0 20px;
+} 
+
+.logo{ /* ロゴ(左) */
+  font-size: 18px;
+  font-weight: bold;  /* 左寄せなので特に調整なし */
+}
+
+.right{
+  /* 右側全体(MAP＋Contact＋≡をまとめる箱) */
+  display: flex;  
+  align-items: flex-end; /* 下寄せにする */
+  gap: 15px;
+  /* ボタンと≡の間に余白をつくる*/
+}
+
+.buttons{ /* MAPとContactのグループ */
+  display: flex; /* 横並び */
+  gap: 10px; /* ボタン間の隙間 */
+  margin-right: 30px; /* ← ここで左に寄せる */
+  margin-bottom: 10px; /* ← これで上に持ち上がる */
+}
+
+.btn{
+  background: #833; /* ボタンの色 */
+  color: white; /* 文字の色 */
+  padding: 5px 10px; /* 文字周りの余白 */
+  border-radius: 4px;
+}
+
+.menu{  /* ハンバーガーメニュー */
+  font-size: 32px;
+  cursor: pointer;  /* マウスをのせたらポインタに */
+  margin-bottom: 15px; /*  これで上に持ち上がる */
+}
+.main-section {
+  background: lightgreen;
+  display: flex;
+  justify-content: center;     /* 水平中央揃え */
+  align-items: center;         /* 垂直中央揃え（高さ次第） */
+  padding: 40px 0;
+  gap: 40px;                   /* 左右の間隔 */
+}
+
+.imge1 {
+  display: flex;          /* 左右に並べる */
+  gap: 20px;              /* 左右の画像の間の余白 */
+  align-items: stretch;   /* 高さを揃える（右の2枚が左に合わせて伸びる） */
+  background: lightgreen; 
+}
+
+.left-image img {
+  height: 100%;           /* imge1の高さいっぱい */
+  object-fit: cover;      /* 画像の縦長を維持して切り抜き */
+  width: 200px;           /* 左画像の横幅 */
+  border: 1px solid #ccc;
+}
+
+.right-images {
+  display: flex;
+  flex-direction: column; /* 右画像を縦に並べる */
+  flex: 1;                /* 左画像以外の幅は右側が広がる */
+  gap: 10px;
+}
+
+.right-images img {
+  width: 100%;            /* 右側エリアの横幅いっぱい */
+  height: 50%;            /* 右エリアの高さの半分ずつ */
+  object-fit: cover;      /* 画像の切り抜き */
+  border: 1px solid #ccc;
+}
+
+.imge2 {
+  display: flex;               /* 横並び */
+  gap: 10px;                  /* 画像間の隙間 */
+  padding: 10px 0;            /* 上下の余白 */
+  justify-content: center;    /* 中央寄せ（お好みで） */
+  background: #f0f0f0;      
+}
+
+.imge2 {
+  height: 150px;              /* 縦の長さを指定 */
+  width: auto;                /* 横幅は自動調整 */
+  object-fit: cover;          /* 画像の切り抜き */
+  border: 1px solid #ccc;
+}
